@@ -13,8 +13,14 @@ class DoublyLinkedList {
         this.tail = null;
     }
     length(){
-        return console.log(this.size)
+        return console.log('current length: ',this.size)
     }
+    add(ele){
+        let trav = this.head
+        let newNode = new Node(ele)
+        
+    }
+
 }
 
 const list = new DoublyLinkedList();
