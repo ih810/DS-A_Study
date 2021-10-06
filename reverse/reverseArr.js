@@ -19,3 +19,4 @@ console.log(arr);
 console.log(counter);
 //time complexity of arr.reverse() is O(n)
 //time complexity of reverseA(arr) is O(n/2)?
+
