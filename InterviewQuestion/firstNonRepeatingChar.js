@@ -21,6 +21,7 @@ function firstNonRepeatingChar (string){
 function firstNonRepeatingCharHashMap (string){
     const map1 = new Map();
 
+    //fill the loop with all char
     for(let i = 0; i<string.length; i++){
         let c = string.charAt(i);
         if(map1.has(c)){
@@ -29,6 +30,8 @@ function firstNonRepeatingCharHashMap (string){
             map1.set(c, 1)
         }
     }
+
+    //look up linear search
     for(let i = 0; i<string.length; i++){
         let c = string.charAt(i);
         if(map1.get(c) === 1) {

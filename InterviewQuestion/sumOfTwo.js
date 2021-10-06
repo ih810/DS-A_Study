@@ -22,6 +22,7 @@ function sumOfTwoBru(a,b,v){
 }
 
 //set
+//lookup for set is const time
 function sumOfTwoSet(a,b,v){
     let dif = new Set();
     for(let i = 0; i < a.length; i++){
