@@ -30,6 +30,8 @@ function firstDuplicate (arr){
 }
 
 //fucking five head solution
+//O(n)
+//no extra space
 function galaxyBrain(arr){
     for(let i = 0; i<arr.length; i++){
         if(arr[Math.abs(arr[i]-1)] < 0){
