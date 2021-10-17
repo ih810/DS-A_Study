@@ -1,6 +1,6 @@
 /**
  * Fibonacci through recursive function
- * O(n^2) which is not a good algorithm
+ * O(2^n) which is not a good algorithm
 **/
 let counter = 0
 function fibonacci (position) {
@@ -14,15 +14,22 @@ function fibonacci (position) {
   }
   console.log(fibonacci(10))
   //fib10
-  //fib9
-  //fib8
-  //fib8//fib7
-  //fib7//fib6
+  //fib9 fib8 fib7 fib6.... fib1
+  //fib8 fib7 fib6 ...fib1
+  //fib7 fib6 ...fib1
   //fib6
   
   console.log('on^2 count:',counter)
-  
-
+  var countA = 0;
+  function fib(n){
+    return new Array(n).fill(1).reduce((arr, _, i) => {
+      arr.push((i<=1)? i:arr[i-2]+arr[i-1])
+      countA++
+      return arr
+    },[]);
+  }
+  fib(10)
+  console.log('ctA', countA)
   /**
    * Memorized Fibonacci: save the computed result in cache and reuse it
   **/
@@ -48,7 +55,7 @@ function fibonacci (position) {
       } else {
         cache[position] = fibMemo(position-1, cache) + fibMemo(position-2, cache)
       }
-  
+      console.log('cache',cache)
       return cache[position]
     }
   }
